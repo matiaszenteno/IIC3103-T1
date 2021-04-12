@@ -1,0 +1,21 @@
+<h1> ¡Breaking Bad & Better Call Saul Wiki! </h1> 
+
+<h3>Detalles del Personaje</h3>
+<img src="<%= @character['img'] %>">
+<p>Nombre: <%= @character['name'] %></p>
+<p>Sobrenombres: <%= @character['nickname'] %></p>
+<p>Status: <%= @character['status'] %></p>
+Ocupación:
+<% @character['occupation'].each_with_index do |occup, index|%>
+     <%= occup %>
+<% end %>
+
+<h3>Episodios de Breaking Bad en los que aparece</h3>
+<% @bb_episodes.each_with_index do |episode, index|%>
+    <p><a href='/episodes/<%= episode['episode_id'] %>'><%= index + 1 %>. <%= episode['title'] %></a></p>
+<% end %>
+
+<h3>Episodios de Better Call Saul en los que aparece</h3>
+<% @bcs_episodes.each_with_index do |episode, index|%>
+    <p><a href='/episodes/<%= episode['episode_id'] %>'><%= index + 1 %>. <%= episode['title'] %></a></p>
+<% end %>

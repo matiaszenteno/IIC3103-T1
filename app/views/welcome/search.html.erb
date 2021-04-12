@@ -1,0 +1,7 @@
+<h1> ¡Breaking Bad & Better Call Saul Wiki! </h1> 
+
+<h3>Resultados de tu búsqueda</h3>
+
+<% @characters.each do |character|%>
+    <p><a href='/characters/<%= character['char_id'] %>'><%= character['name'] %></a></p>
+<% end %>

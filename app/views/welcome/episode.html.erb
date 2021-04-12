@@ -1,0 +1,12 @@
+<h1> ¡Breaking Bad & Better Call Saul Wiki! </h1> 
+
+<h3>Detalles del Episodio</h3>
+
+<p>Nombre: <%= @episode['title'] %></p>
+<p>Fecha al aire: <%= @episode['air_date'] %></p>
+<p>Personajes:
+<div>
+    <% @characters.each_with_index do |character, index|%>
+        <a href='/characters/<%= character['char_id'] %>'><%= character['name'] %>
+    <% end %>
+</div>

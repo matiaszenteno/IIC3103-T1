@@ -1,0 +1,21 @@
+<h1> ¡Breaking Bad & Better Call Saul Wiki! </h1> 
+
+<h3>Barra de búsqueda</h3>
+
+<%= form_tag("/search", method: "post") do %>
+  <%= label_tag(:search, "") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("search") %>
+<% end %>
+
+<h3>Temporadas Breaking Bad</h3>
+
+<% @bb_seasons.each do |season| %>
+    <p><a href='seasons/breakingbad/<%= season %>'>Temporada <%= season %></a></p>
+<% end %>
+
+<h3>Temporadas Better Call Saul</h3>
+
+<% @bcs_seasons.each do |season| %>
+    <p><a href='seasons/bettercallsaul/<%= season %>'>Temporada <%= season %></a></p>
+<% end %>

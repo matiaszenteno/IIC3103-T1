@@ -1,0 +1,7 @@
+<h1> ¡Breaking Bad & Better Call Saul Wiki! </h1> 
+
+<h3>Episodios Temporada <%= @season_id %> <%= @show_title %></h3>
+
+<% @episodes_filtered.each_with_index do |episode, index|%>
+    <p><a href='/episodes/<%= episode['episode_id'] %>'><%= index + 1 %>. <%= episode['title'] %></a></p>
+<% end %>
